@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApplication3.AddOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication3"
+        mc:Ignorable="d"
+        Title="AddOrder" Height="270" Width="610">
+    <StackPanel Orientation="Vertical">
+        <Label Margin="20,5,20,5" FontWeight="Bold" FontSize="20">Add order:</Label>
+        <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+            <Label Content="Order date:" Margin="5,0,5,0"/>
+            <DatePicker x:Name="OrderDateDatePicker"/>
+            <Label Content="Required date:" Margin="5,0,5,0"/>
+            <DatePicker x:Name="RequiredDateDatePicker"/>
+            <Label Content="Shipped date:" Margin="5,0,5,0"/>
+            <DatePicker x:Name="ShippedDateDatePicker"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+            <Label Content="Freight:" Margin="5,0,5,0"/>
+            <TextBox x:Name="FreightTextBox" Width="150" Text="{Binding Amount,Mode=TwoWay,StringFormat={}{0:C}}"/>
+            <Label Content="ShipName:" Margin="5,0,5,0"/>
+            <TextBox x:Name="ShipNameTextBox" Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+            <Label Content="Ship address:" Margin="5,0,5,0"/>
+            <TextBox x:Name="ShipAddressTextBox" Width="120"/>
+            <Label Content="Ship city:" Margin="5,0,5,0"/>
+            <TextBox x:Name="ShipCityTextBox" Width="120"/>
+            <Label Content="Ship postal code:" Margin="5,0,5,0"/>
+            <TextBox x:Name="ShipPostalTextBox" Width="50"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+            <Label Content="Ship region:" Margin="5,0,5,0"/>
+            <TextBox x:Name="ShipRegionTextBox" Width="150"/>
+            <Label Content="Ship country:" Margin="5,0,5,0"/>
+            <TextBox x:Name="ShipCountryTextBox" Width="150"/>
+        </StackPanel>
+        <Button Content="Add" Width="100" Height="25" HorizontalAlignment="Right" Margin="0,5,10,0" Click="Button_Click"/>
+    </StackPanel>
+</Window>
